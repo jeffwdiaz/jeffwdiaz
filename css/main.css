@@ -1,0 +1,92 @@
+/* =============================== */
+/* Theme Variables                 */
+/* =============================== */
+:root {
+    --primary-color: #402817;
+    --secondary-color: #6c757d;
+    --accent-color: #17a2b8;
+    --background-color: #ecdcc6;
+    --text-color: #111111;
+    --color-link: #111111;
+    --color-link-hover: #b66e03;
+}
+
+/* =============================== */
+/* Layout: Sticky Footer           */
+/* =============================== */
+html, body {
+    height: 100%; /* Ensure full viewport height for flex layout */
+    margin: 0;    /* Remove default margin */
+    padding: 0;   /* Remove default padding */
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+main {
+    flex: 1; /* Fills available space between header and footer */
+    margin: 1em;
+}
+footer {
+    margin: 1em 1em 0 1em;
+}
+
+/* =============================== */
+/* Base Styles                     */
+/* =============================== */
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* =============================== */
+/* List Styles                     */
+/* =============================== */
+/* Remove bullet points from all unordered lists (ul) on the site. */
+ul {
+    list-style-type: none;
+    padding-left: 0; /* Removes default indentation */
+}
+
+/* =============================== */
+/* Link Styles                     */
+/* =============================== */
+/* Style all anchor (a) tags to remove underline and set default link colors. */
+a {
+    text-decoration: none; /* Removes underline */
+    color: var(--color-link); /* Default link color (customize as desired) */
+}
+a:hover, a:focus {
+    text-decoration: underline; /* Underline on hover/focus for accessibility */
+    color: var(--color-link-hover); /* Darker shade on hover/focus (customize as desired) */
+}
+
+/* Override global link hover/focus styles for links within unordered lists. This prevents underlines on hover/focus for links inside ULs. */
+ul a:hover, ul a:focus {
+    text-decoration: none; /* Prevent underline on hover/focus for links inside ULs */
+}
